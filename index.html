@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>C++ Portfolio Showcase</h1>
+        <p>Programs ordered from easiest to hardest</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Program 1 -->
+        <div class="card">
+            <h2>1. Print Numbers 0 to 4 (While Loop)</h2>
+            <p class="desc">Print numbers from 0 to 4 using a simple while loop.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 0;
+    while (i &lt; 5) {
+        cout &lt;&lt; i &lt;&lt; endl;
+        i++;
+    }
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="card">
+            <h2>2. Factorial of a Number</h2>
+            <p class="desc">Calculate factorial using a while loop.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    long long factorial = 1;
+    cin &gt;&gt; n;
+
+    while (n &gt; 0) {
+        factorial *= n;
+        n--;
+    }
+
+    cout &lt;&lt; factorial;
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="card">
+            <h2>3. Reverse a Number</h2>
+            <p class="desc">Reverse the digits of a given number using do-while loop.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num, rem;
+    cin &gt;&gt; num;
+    do {
+        rem = num % 10;
+        cout &lt;&lt; rem;
+        num /= 10;
+    } while (num &gt; 0);
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="card">
+            <h2>4. Odd Numbers 100-50</h2>
+            <p class="desc">Print all odd numbers between 100 and 50 using a for loop.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 100; i &gt;= 50; i--) {
+        if (i % 2 != 0) cout &lt;&lt; i &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="card">
+            <h2>5. Find the Biggest of Three Numbers</h2>
+            <p class="desc">Determine the biggest number among three integers.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int A, B, C, biggest;
+    char winner;
+    cin &gt;&gt; A &gt;&gt; B &gt;&gt; C;
+
+    if (A &gt;= B &amp;&amp; A &gt;= C) { biggest = A; winner = 'A'; }
+    else if (B &gt;= C) { biggest = B; winner = 'B'; }
+    else { biggest = C; winner = 'C'; }
+
+    cout &lt;&lt; winner &lt;&lt; " = " &lt;&lt; biggest;
+    return 0;
+}</code></pre>
+        </div>
+
+        <!-- Program 6 -->
+        <div class="card">
+            <h2>6. Age & GPA Check</h2>
+            <p class="desc">Check eligibility based on age and GPA using nested if statements.</p>
+            <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    double gpa;
+    cin &gt;&gt; age &gt;&gt; gpa;
+    if(age &gt;= 18){
+        if(gpa &gt;= 3.5) cout &lt;&lt; "Advanced";
+        else cout &lt;&lt; "Standard";
+    } else cout &lt;&lt; "Not eligible";
+    return 0;
+}</code></pre>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Khaled | C++ Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
